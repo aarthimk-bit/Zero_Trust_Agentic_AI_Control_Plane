@@ -1,0 +1,9 @@
+   log: 2026-08-04T19:38:49+00:00 | task_commit | agent=fb03cd639a81b134 | COMMITTED | task=T-SEC-1 spec_hash=fa634114eef5d92c..
+   log: 2026-08-04T19:38:49+00:00 | evidence_check | agent=ae869abb8d602d73 | VERIFIED | task=T-SEC-1 V1 hash match
+   log: 2026-08-04T19:38:49+00:00 | evidence_check | agent=7cfc3f10983f75d5 | REJECTED | task=T-SEC-1 result submitted by non-assignee
+   log: 2026-08-04T19:38:49+00:00 | task_commit | agent=fb03cd639a81b134 | COMMITTED | task=T-SEC-2 spec_hash=9707824718168e89..
+   log: 2026-08-04T19:38:49+00:00 | evidence_check | agent=ae869abb8d602d73 | VERIFIED | task=T-SEC-2 V2 execution-record match
+   log: 2026-08-04T19:38:49+00:00 | evidence_check | agent=7cfc3f10983f75d5 | REJECTED | task=T-SEC-2 evidence submitted by non-assignee
+   log: 2026-08-04T19:38:49+00:00 | evidence_check | agent=ae869abb8d602d73 | VIOLATION | task=T-SEC-2 execution-record task identifier mismatch
+   log: 2026-08-04T19:38:49+00:00 | evidence_check | agent=ae869abb8d602d73 | VIOLATION | task=T-SEC-2 V2 output digest mismatch
+PASS: M6 evidence binding checks completed successfully.

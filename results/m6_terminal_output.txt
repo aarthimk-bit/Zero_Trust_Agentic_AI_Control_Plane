@@ -1,0 +1,51 @@
+==============================================================================
+M6  Comparative evaluation: baseline vs V1 vs V2
+     10 seeds, 200 tasks, 15% attacks, 40% non-deterministic honest records tasks
+==============================================================================
+
+Study A  Mean over 10 seeds      baseline        V1        V2
+------------------------------------------------------------------------------
+Accuracy                        0.900     0.809     1.000
+Unauthorised-access block       0.000     1.000     1.000
+Excessive-privilege block       1.000     1.000     1.000
+Task-mismatch detection         0.000     1.000     1.000
+False-positive rate             0.000     0.224     0.000
+False-negative rate             0.667     0.000     0.000
+------------------------------------------------------------------------------
+Overhead, as defined in Table 3.5 (relative to baseline)
+Latency SD (ms)                 0.022     0.099     0.114
+Added latency (ms)             +0.000    +0.319    +0.331
+Messages / completed task        3.00      3.00      3.00
+Added messages vs baseline      +0.00     +0.00     +0.00
+Result payload bytes               95        84        95
+Verification evidence bytes         0         0       242
+Added bytes vs baseline            +0       -11      +242
+------------------------------------------------------------------------------
+
+Study B  V2 across attack rates (mean over 10 seeds)
+------------------------------------------------------------------------------
+rate   accuracy   unauth_block   mismatch_detect   false_neg   latency_ms
+  5%     1.000        1.000          1.000            0.000       1.005
+ 10%     1.000        1.000          1.000            0.000       1.023
+ 15%     1.000        1.000          1.000            0.000       0.987
+ 20%     1.000        1.000          1.000            0.000       0.991
+ 25%     1.000        1.000          1.000            0.000       0.966
+
+Study C  Trust-parameter sensitivity, V2 with trust updates enabled
+------------------------------------------------------------------------------
+reward  violation   normal      mismatch    mismatch    quarantine   conditional
+                    completion  detection   contained   reached      mean TTQ
+ 0.01      0.50        0.481       0.140       1.000      10/10           5.1
+ 0.02      0.50        0.489       0.170       1.000      10/10           6.8
+ 0.02      0.70        0.675       0.550       1.000       9/10          34.4
+ 0.02      0.90        1.000       1.000       1.000       0/10           n/a
+ 0.05      0.70        0.965       0.940       1.000       1/10          40.0
+------------------------------------------------------------------------------
+Note: trust updates are live in Study C. Once a compromised agent is
+quarantined, its later tasks are blocked before reaching the evidence
+check, so evidence-level DETECTION falls while CONTAINMENT stays high,
+and the agent's honest tasks are blocked too, lowering normal completion.
+Conditional mean TTQ averages only the runs that reached quarantine.
+
+130 seeded runs completed (30 in Study A, 50 in Study B, 50 in Study C).
+Per-run results written to results_m6_main.csv, results_m6_sensitivity.csv, results_m6_trust_sensitivity.csv

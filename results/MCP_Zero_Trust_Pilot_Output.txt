@@ -1,0 +1,14 @@
+========================================================================
+STUDY E — MCP ZERO TRUST INTEGRATION PILOT
+MCP protocol version: 2026-07-28
+========================================================================
+MCP-01  Assigned records read              ALLOW           PASS
+MCP-02  Wrong-patient records read         BLOCK           PASS
+MCP-03  Authorised calendar write          ALLOW           PASS
+MCP-04  Clinical-record write              BLOCK           PASS
+MCP-05  Quarantined-agent request          BLOCK           PASS
+MCP-06  End-to-end discharge workflow      ALLOW -> ALLOW  PASS
+------------------------------------------------------------------------
+6 / 6 validation cases passed
+Structured evidence written to results_mcp_zero_trust_pilot.csv
+========================================================================

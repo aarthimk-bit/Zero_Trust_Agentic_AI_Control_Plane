@@ -1,0 +1,19 @@
+==============================================================================
+Study D  Adversarial robustness of task evidence
+     10 seeds, task-mismatch episodes from the Study A streams
+==============================================================================
+
+Episodes tested per behaviour and verifier: 100  (10 per seed)
+
+Execution behaviour                                 V1          V2
+------------------------------------------------------------------------------
+Honest deterministic execution (control)         0.000       0.000  <- false positives
+Naive fabrication, inputs not read               1.000       1.000  <- detection rate
+Internally consistent forgery, inputs read       1.000       0.000  <- detection rate
+------------------------------------------------------------------------------
+Values are the mean proportion of episodes the verifier rejected,
+averaged over ten seeds. For the honest control a non-zero value
+would be a false positive; for the two dishonest behaviours a value
+of 1.000 is complete detection and 0.000 is complete evasion.
+
+600 verification cases written to results_study_d_forged_evidence.csv

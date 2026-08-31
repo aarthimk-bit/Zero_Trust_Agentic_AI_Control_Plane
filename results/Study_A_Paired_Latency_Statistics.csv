@@ -1,0 +1,4 @@
+condition,n,mean_paired_latency_difference_ms,sample_sd_ms,ci95_lower_ms,ci95_upper_ms
+scoped,10,0.003491,0.003143,0.001242,0.005739
+V1,10,0.319250,0.004495,0.316035,0.322465
+V2,10,0.302321,0.014407,0.292015,0.312628

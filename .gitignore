@@ -1,0 +1,23 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+
+# macOS metadata
+.DS_Store
+
+# Runtime logs
+events.log
+
+# Local environment / secrets
+.env
+.env.*
+*.pem
+*.key
+
+# IDE/editor files
+.vscode/
+.idea/

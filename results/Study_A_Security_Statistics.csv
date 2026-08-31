@@ -1,0 +1,25 @@
+condition,metric,n,mean_percent,sample_sd_percent,ci95_lower_percent,ci95_upper_percent
+baseline,Accuracy,10,90.0000,0.0000,90.0000,90.0000
+baseline,Unauthorised-access block,10,0.0000,0.0000,0.0000,0.0000
+baseline,Excessive-privilege block,10,100.0000,0.0000,100.0000,100.0000
+baseline,Task-mismatch detection,10,0.0000,0.0000,0.0000,0.0000
+baseline,False-positive rate,10,0.0000,0.0000,0.0000,0.0000
+baseline,False-negative rate,10,66.6667,0.0000,66.6667,66.6667
+scoped,Accuracy,10,95.0000,0.0000,95.0000,95.0000
+scoped,Unauthorised-access block,10,100.0000,0.0000,100.0000,100.0000
+scoped,Excessive-privilege block,10,100.0000,0.0000,100.0000,100.0000
+scoped,Task-mismatch detection,10,0.0000,0.0000,0.0000,0.0000
+scoped,False-positive rate,10,0.0000,0.0000,0.0000,0.0000
+scoped,False-negative rate,10,33.3333,0.0000,33.3333,33.3333
+V1,Accuracy,10,80.9500,2.9007,78.8750,83.0250
+V1,Unauthorised-access block,10,100.0000,0.0000,100.0000,100.0000
+V1,Excessive-privilege block,10,100.0000,0.0000,100.0000,100.0000
+V1,Task-mismatch detection,10,100.0000,0.0000,100.0000,100.0000
+V1,False-positive rate,10,22.4118,3.4126,19.9706,24.8530
+V1,False-negative rate,10,0.0000,0.0000,0.0000,0.0000
+V2,Accuracy,10,100.0000,0.0000,100.0000,100.0000
+V2,Unauthorised-access block,10,100.0000,0.0000,100.0000,100.0000
+V2,Excessive-privilege block,10,100.0000,0.0000,100.0000,100.0000
+V2,Task-mismatch detection,10,100.0000,0.0000,100.0000,100.0000
+V2,False-positive rate,10,0.0000,0.0000,0.0000,0.0000
+V2,False-negative rate,10,0.0000,0.0000,0.0000,0.0000
